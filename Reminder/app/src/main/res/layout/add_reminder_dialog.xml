@@ -10,7 +10,7 @@
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="500dp"
-        android:background="@drawable/background2"
+        android:background="@drawable/background"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="-98dp"
