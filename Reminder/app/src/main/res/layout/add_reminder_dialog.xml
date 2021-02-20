@@ -33,11 +33,10 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:ems="10"
-            android:hint="mobile development assigment"
             android:inputType="none"
             android:selectAllOnFocus="true"
             android:singleLine="false"
-            android:text="@string/title" />
+            android:hint="@string/title" />
 
         <!--Reminder date-->
         <EditText
@@ -48,7 +47,7 @@
             android:layout_marginRight="30dp"
             android:ems="10"
             android:inputType="none"
-            android:text="@string/date" />
+            android:hint="@string/date" />
 
         <!--Reminder time-->
         <EditText
@@ -59,7 +58,18 @@
             android:layout_marginRight="30dp"
             android:ems="10"
             android:inputType="none"
-            android:text="@string/time" />
+            android:hint="@string/time" />
+
+        <!--Reminder time-->
+        <EditText
+            android:id="@+id/importance_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:ems="10"
+            android:inputType="none"
+            android:hint="@string/importance" />
 
         <Button
             android:id="@+id/doneButton"
