@@ -22,43 +22,44 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:gravity="center"
-            android:text="new reminder"
+            android:text="@string/new_reminder"
             android:textSize="30dp" />
 
+        <!-- Reminder title-->
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/title_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:ems="10"
             android:hint="mobile development assigment"
-            android:inputType="textPersonName"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-
+            android:inputType="none"
             android:selectAllOnFocus="true"
             android:singleLine="false"
-            android:text="Title" />
+            android:text="@string/title" />
 
+        <!--Reminder date-->
         <EditText
-            android:id="@+id/editTextTextPersonName3"
+            android:id="@+id/date_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
+            android:ems="10"
+            android:inputType="none"
+            android:text="@string/date" />
 
-            android:inputType="textPersonName"
-            android:text="date" />
-
+        <!--Reminder time-->
         <EditText
-            android:id="@+id/editTextTextPersonName4"
+            android:id="@+id/time_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:text="time" />
+            android:ems="10"
+            android:inputType="none"
+            android:text="@string/time" />
 
         <Button
             android:id="@+id/doneButton"
@@ -66,7 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:background="#AFFDE8"
-            android:text="done"
+            android:text="@string/done"
             android:textColor="#FFFFFF" />
 
     </LinearLayout>

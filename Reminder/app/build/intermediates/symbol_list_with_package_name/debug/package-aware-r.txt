@@ -1849,6 +1849,7 @@ id counterclockwise
 id custom
 id customPanel
 id cut
+id date_input
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -1879,9 +1880,6 @@ id dropdown_menu
 id easeIn
 id easeInOut
 id easeOut
-id editTextTextPersonName2
-id editTextTextPersonName3
-id editTextTextPersonName4
 id edit_query
 id elastic
 id end
@@ -2125,8 +2123,10 @@ id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
 id time
+id time_input
 id title
 id titleDividerNoCustom
+id title_input
 id title_template
 id toggle
 id toolbar
@@ -2344,6 +2344,8 @@ string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
+string date
+string done
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
@@ -2406,6 +2408,7 @@ string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
+string new_reminder
 string next
 string password_toggle_content_description
 string path_password_eye
@@ -2416,6 +2419,8 @@ string previous
 string search_menu_title
 string second_fragment_label
 string status_bar_notification_info_overflow
+string time
+string title
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow
