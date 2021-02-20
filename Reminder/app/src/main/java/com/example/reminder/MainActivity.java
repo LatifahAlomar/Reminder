@@ -1,5 +1,6 @@
 package com.example.reminder;
 
+import android.app.Dialog;
 import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -9,9 +10,12 @@ import android.view.View;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
+    Dialog newRminder ; //this is the dialog for adding new reminder , in this dialog there is 3 input text the first for the title second for date thierd one for the time
+    Button doneButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,12 +24,28 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         toolbar.setTitle("Reminder");
 
+               newRminder = new Dialog(this);
+        newRminder.setContentView(R.layout.add_reminder_dialog);
+        doneButton = newRminder.findViewById(R.id.doneButton);
+
+        doneButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                newRminder.dismiss();
+//
+            }
+        });
+//
+
        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
+                newRminder.show();
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
             }
         });
     }
