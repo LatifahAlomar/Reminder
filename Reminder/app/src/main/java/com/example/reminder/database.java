@@ -62,14 +62,13 @@ public class database extends SQLiteOpenHelper {
         } else {
             return false;
         }
-
     }
 
     public Cursor getdata ()
     {
         SQLiteDatabase DB = this.getWritableDatabase();
-        //Cursor cursor = DB.rawQuery("Select * from reminder", null);
-        Cursor cursor = DB.rawQuery("Select * from reminder Order By date ASC", null);
+        Cursor cursor = DB.rawQuery("Select * from reminder", null);
+        //Cursor cursor = DB.rawQuery("Select * from reminder Order By date ASC", null);//
         return cursor;
 
     }
