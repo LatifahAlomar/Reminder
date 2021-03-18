@@ -1,6 +1,7 @@
 package com.example.reminder;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -11,11 +12,14 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     Dialog newRminder ; //this is the dialog for adding new reminder , in this dialog there is 3 input text the first for the title second for date thierd one for the time
     Button doneButton;
+    database DB = new database(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +36,28 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                newRminder.dismiss();
+                //database insertion
+                EditText titleInput = newRminder.findViewById(R.id.TitleEditText);
+                EditText dateInput = newRminder.findViewById(R.id.dateInput);
+                EditText timeInput = newRminder.findViewById(R.id.TimeInput);
+
+                String title = titleInput.getText().toString();
+                String date = dateInput.getText().toString();
+                String time = timeInput.getText().toString();
+
+                Boolean checking = DB.insertuserdata(title,date,time,"");
+
+                if(checking){
+                    newRminder.dismiss();
+                    Context context = getApplicationContext();
+                    Toast toast = Toast.makeText(context, "added a new reminder successfully", Toast.LENGTH_SHORT);
+                    toast.show();
+                }
+                else{
+                    Context context = getApplicationContext();
+                    Toast toast = Toast.makeText(context, "try again", Toast.LENGTH_SHORT);
+                    toast.show();
+                }
 //
             }
         });

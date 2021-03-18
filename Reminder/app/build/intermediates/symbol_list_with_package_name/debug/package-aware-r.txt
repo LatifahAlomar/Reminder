@@ -1741,6 +1741,8 @@ id SYM
 id SecondFragment
 id TOP_END
 id TOP_START
+id TimeInput
+id TitleEditText
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -1851,6 +1853,7 @@ id counterclockwise
 id custom
 id customPanel
 id cut
+id dateInput
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -1881,9 +1884,6 @@ id dropdown_menu
 id easeIn
 id easeInOut
 id easeOut
-id editTextTextPersonName2
-id editTextTextPersonName3
-id editTextTextPersonName4
 id edit_query
 id elastic
 id end

@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 #Tue Feb 23 15:41:33 AST 2021
 base.0=C\:\\Users\\TW\\Reminder\\Reminder\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+=======
+#Mon Mar 01 15:41:30 AST 2021
+base.0=C\:\\Users\\96655\\Documents\\GitHub\\Reminder\\Reminder\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+>>>>>>> 9e20338e84174f348b56916fed07786e13d06b2b
 path.0=classes.dex
 renamed.0=classes.dex
