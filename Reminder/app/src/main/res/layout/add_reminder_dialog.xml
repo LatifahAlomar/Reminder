@@ -34,10 +34,22 @@
             android:inputType="textPersonName"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-
             android:selectAllOnFocus="true"
             android:singleLine="false"
             android:text="Title" />
+
+        <EditText
+            android:id="@+id/Priority"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="mobile development assigment"
+            android:inputType="textPersonName"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:selectAllOnFocus="true"
+            android:singleLine="false"
+            android:text="Priority" />
 
         <EditText
             android:id="@+id/dateInput"

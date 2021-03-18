@@ -3,23 +3,36 @@ package com.example.reminder;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import android.view.View;
-
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
+
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter adapter;
+    private RecyclerView.LayoutManager layoutManager;
+
 
     Dialog newRminder ; //this is the dialog for adding new reminder , in this dialog there is 3 input text the first for the title second for date thierd one for the time
     Button doneButton;
     database DB = new database(this);
+
+    public MainActivity() {
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,24 +41,47 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         toolbar.setTitle("Reminder");
 
-               newRminder = new Dialog(this);
+        newRminder = new Dialog(this);
         newRminder.setContentView(R.layout.add_reminder_dialog);
         doneButton = newRminder.findViewById(R.id.doneButton);
+
+        ArrayList<remind_card> cardArrayList = new ArrayList<>();
 
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 //database insertion
+                EditText priorityInput =newRminder.findViewById(R.id.Priority);
                 EditText titleInput = newRminder.findViewById(R.id.TitleEditText);
                 EditText dateInput = newRminder.findViewById(R.id.dateInput);
                 EditText timeInput = newRminder.findViewById(R.id.TimeInput);
 
+                String priority = priorityInput.getText().toString();
                 String title = titleInput.getText().toString();
                 String date = dateInput.getText().toString();
                 String time = timeInput.getText().toString();
 
-                Boolean checking = DB.insertuserdata(title,date,time,"");
+               // cardArrayList.add(new remind_card("rr", "Line 1", "Line 2","re3"));
+
+                Boolean checking = DB.insertuserdata(title,date,time,priority);
+//                Cursor cursor = DB.getdata();
+//                while(cursor.moveToNext()) {
+//                    int index;
+//                    index = cursor.getColumnIndexOrThrow("title");
+//                    String t = cursor.getString(index);
+//
+//                    index = cursor.getColumnIndexOrThrow("date");
+//                    String d = cursor.getString(index);
+//
+//                    index = cursor.getColumnIndexOrThrow("time");
+//                    String tim = cursor.getString(index);
+//
+//                    index = cursor.getColumnIndexOrThrow("importance");
+//                    String p = cursor.getString(index);
+//                    cardArrayList.add(new remind_card(p,t,d,tim));
+//                }
+
 
                 if(checking){
                     newRminder.dismiss();
@@ -61,7 +97,16 @@ public class MainActivity extends AppCompatActivity {
 //
             }
         });
-//
+
+        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setHasFixedSize(true);
+        layoutManager = new LinearLayoutManager(this);
+
+        adapter = new adapter(cardArrayList);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(adapter);
+
+
 
        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

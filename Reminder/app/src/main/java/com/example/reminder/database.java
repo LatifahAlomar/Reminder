@@ -6,9 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import java.sql.Date;
-import java.sql.Time;
-
 //source code from :
 //https://www.allcodingtutorials.com/post/insert-delete-update-and-view-data-in-sqlite-database-android-studio
 
@@ -45,8 +42,6 @@ public class database extends SQLiteOpenHelper {
             return true;
         }
     }
-
-
 
     public Boolean deletedata (String title)
     {

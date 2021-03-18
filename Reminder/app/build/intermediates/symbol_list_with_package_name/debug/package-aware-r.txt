@@ -1733,6 +1733,7 @@ id FUNCTION
 id FirstFragment
 id META
 id NO_DEBUG
+id Priority
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -2034,6 +2035,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recyclerView
 id reverseSawtooth
 id right
 id rightToLeft

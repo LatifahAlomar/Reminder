@@ -1,18 +1,18 @@
 package com.example.reminder;
-
+//source: https://www.youtube.com/watch?v=Nw9JF55LDzE
 public class remind_card {
-    private int Priority;
+    private String Priority;
     private String Time;
     private String Date;
     private String Task;
 
-    public remind_card (int priority,String task , String date, String time ){
+    public remind_card (String priority,String task , String date, String time ){
         Priority=priority;
         Task=task;
         Time=time;
         Date=date;
     }
-    public int getPriority(){
+    public String getPriority(){
         return Priority;
     }
 
@@ -27,4 +27,5 @@ public class remind_card {
     public String getTask() {
         return Task;
     }
+
 }
