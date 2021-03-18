@@ -36,20 +36,20 @@
         "source": "C:\\Users\\TW\\Reminder\\Reminder\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\TW\\Reminder\\Reminder\\app\\build\\intermediates\\res\\merged\\debug\\layout_content_main.xml.flat",
-        "source": "C:\\Users\\TW\\Reminder\\Reminder\\app\\src\\main\\res\\layout\\content_main.xml"
-    },
-    {
         "merged": "C:\\Users\\TW\\Reminder\\Reminder\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\TW\\Reminder\\Reminder\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\TW\\Reminder\\Reminder\\app\\build\\intermediates\\res\\merged\\debug\\layout_add_reminder_dialog.xml.flat",
-        "source": "C:\\Users\\TW\\Reminder\\Reminder\\app\\src\\main\\res\\layout\\add_reminder_dialog.xml"
+        "merged": "C:\\Users\\TW\\Reminder\\Reminder\\app\\build\\intermediates\\res\\merged\\debug\\layout_content_main.xml.flat",
+        "source": "C:\\Users\\TW\\Reminder\\Reminder\\app\\src\\main\\res\\layout\\content_main.xml"
     },
     {
         "merged": "C:\\Users\\TW\\Reminder\\Reminder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_alarm_24.png.flat",
         "source": "C:\\Users\\TW\\Reminder\\Reminder\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_alarm_24.png"
+    },
+    {
+        "merged": "C:\\Users\\TW\\Reminder\\Reminder\\app\\build\\intermediates\\res\\merged\\debug\\layout_add_reminder_dialog.xml.flat",
+        "source": "C:\\Users\\TW\\Reminder\\Reminder\\app\\src\\main\\res\\layout\\add_reminder_dialog.xml"
     },
     {
         "merged": "C:\\Users\\TW\\Reminder\\Reminder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_background.png.flat",
