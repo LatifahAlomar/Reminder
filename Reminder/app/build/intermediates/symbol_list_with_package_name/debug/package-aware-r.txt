@@ -1731,6 +1731,7 @@ id BOTTOM_START
 id CTRL
 id FUNCTION
 id FirstFragment
+id FrigmantrecyclerView
 id META
 id NO_DEBUG
 id Priority
@@ -1743,7 +1744,9 @@ id SecondFragment
 id TOP_END
 id TOP_START
 id TimeInput
+id TimeView
 id TitleEditText
+id TitleView
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -1855,6 +1858,7 @@ id custom
 id customPanel
 id cut
 id dateInput
+id dateView
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -2030,6 +2034,7 @@ id percent
 id pin
 id position
 id postLayout
+id priorityView
 id progress_circular
 id progress_horizontal
 id radio
@@ -2118,11 +2123,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id textView
 id textView2
-id textView3
-id textView5
-id textView6
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon

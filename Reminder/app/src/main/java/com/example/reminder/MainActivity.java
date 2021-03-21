@@ -15,6 +15,8 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     Dialog newRminder ; //this is the dialog for adding new reminder , in this dialog there is 3 input text the first for the title second for date thierd one for the time
@@ -48,8 +50,11 @@ public class MainActivity extends AppCompatActivity {
                 String time = timeInput.getText().toString();
 
                 Boolean checking = DB.insertuserdata(title,date,time,priority);
-
+                ArrayList<remind_card> cardArrayList = new ArrayList<>();
+                cardArrayList.add(new remind_card(priority,title,date,time));
+                Adapter listAdapter = new Adapter(cardArrayList);
                 if(checking){
+                    listAdapter.notifyDataSetChanged();
                     newRminder.dismiss();
                     Context context = getApplicationContext();
                     Toast toast = Toast.makeText(context, "added a new reminder successfully", Toast.LENGTH_SHORT);
@@ -62,8 +67,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
-
        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
