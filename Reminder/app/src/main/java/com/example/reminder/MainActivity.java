@@ -2,6 +2,7 @@ package com.example.reminder;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,6 +13,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -22,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
     Dialog newRminder ; //this is the dialog for adding new reminder , in this dialog there is 3 input text the first for the title second for date thierd one for the time
     Button doneButton;
     database DB = new database(this);
+    ArrayList<remind_card> cardArrayList;
+    Adapter listAdapter;
+    RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,10 +36,23 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setTitle("Reminder");
-
         newRminder = new Dialog(this);
         newRminder.setContentView(R.layout.add_reminder_dialog);
         doneButton = newRminder.findViewById(R.id.doneButton);
+
+        // RecyclerView
+        recyclerView = findViewById(R.id.recyclerView);
+        cardArrayList = new ArrayList<>();
+        listAdapter  = new Adapter(cardArrayList);
+        recyclerView.setAdapter(listAdapter);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+
+        updateList();
+
+
+
+
 
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,15 +69,16 @@ public class MainActivity extends AppCompatActivity {
                 String time = timeInput.getText().toString();
 
                 Boolean checking = DB.insertuserdata(title,date,time,priority);
-                ArrayList<remind_card> cardArrayList = new ArrayList<>();
-                cardArrayList.add(new remind_card(priority,title,date,time));
-                Adapter listAdapter = new Adapter(cardArrayList);
+
+
+
                 if(checking){
-                    listAdapter.notifyDataSetChanged();
+
                     newRminder.dismiss();
                     Context context = getApplicationContext();
                     Toast toast = Toast.makeText(context, "added a new reminder successfully", Toast.LENGTH_SHORT);
                     toast.show();
+                    updateList();
                 }
                 else{
                     Context context = getApplicationContext();
@@ -78,6 +98,31 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
+    public void updateList(){
+        Cursor cursor = DB.getdata();
+        while(cursor.moveToNext()) {
+            int index;
+            index = cursor.getColumnIndexOrThrow("title");
+            String t = cursor.getString(index);
+
+            index = cursor.getColumnIndexOrThrow("date");
+            String d = cursor.getString(index);
+
+            index = cursor.getColumnIndexOrThrow("time");
+            String tim = cursor.getString(index);
+
+            index = cursor.getColumnIndexOrThrow("importance");
+            String p = cursor.getString(index);
+            cardArrayList.add(new remind_card(p,t,d,tim));
+        }
+
+        listAdapter.notifyDataSetChanged();
+
+    }
+
+
 @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

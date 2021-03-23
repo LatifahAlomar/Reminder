@@ -1,6 +1,5 @@
 package com.example.reminder;
 
-import android.database.Cursor;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,22 +26,22 @@ public class FirstFragment extends Fragment {
         RecyclerView recyclerView = (RecyclerView)view.findViewById(R.id.FrigmantrecyclerView);
         DB = new database(getContext());
          cardArrayList = new ArrayList<>();
-        Cursor cursor = DB.getdata();
-        while(cursor.moveToNext()) {
-            int index;
-            index = cursor.getColumnIndexOrThrow("title");
-            String t = cursor.getString(index);
-
-            index = cursor.getColumnIndexOrThrow("date");
-            String d = cursor.getString(index);
-
-            index = cursor.getColumnIndexOrThrow("time");
-            String tim = cursor.getString(index);
-
-            index = cursor.getColumnIndexOrThrow("importance");
-            String p = cursor.getString(index);
-            cardArrayList.add(new remind_card(p,t,d,tim));
-        }
+//        Cursor cursor = DB.getdata();
+//        while(cursor.moveToNext()) {
+//            int index;
+//            index = cursor.getColumnIndexOrThrow("title");
+//            String t = cursor.getString(index);
+//
+//            index = cursor.getColumnIndexOrThrow("date");
+//            String d = cursor.getString(index);
+//
+//            index = cursor.getColumnIndexOrThrow("time");
+//            String tim = cursor.getString(index);
+//
+//            index = cursor.getColumnIndexOrThrow("importance");
+//            String p = cursor.getString(index);
+//            cardArrayList.add(new remind_card(p,t,d,tim));
+//        }
 
         Adapter listAdapter = new Adapter(cardArrayList) ;
         recyclerView.setAdapter(listAdapter);

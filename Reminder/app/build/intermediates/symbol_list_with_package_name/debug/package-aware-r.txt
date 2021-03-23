@@ -2006,7 +2006,6 @@ id mtrl_view_tag_bottom_padding
 id multiply
 id nav_controller_view_tag
 id nav_graph
-id nav_host_fragment
 id nav_host_fragment_container
 id navigation_header_container
 id never
