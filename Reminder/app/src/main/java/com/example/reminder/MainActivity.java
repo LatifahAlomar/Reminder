@@ -101,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void updateList(){
+        ArrayList<remind_card> updatedCardArrayList = new ArrayList<>();
         Cursor cursor = DB.getdata();
         while(cursor.moveToNext()) {
             int index;
@@ -115,9 +116,9 @@ public class MainActivity extends AppCompatActivity {
 
             index = cursor.getColumnIndexOrThrow("importance");
             String p = cursor.getString(index);
-            cardArrayList.add(new remind_card(p,t,d,tim));
+            updatedCardArrayList.add(new remind_card(p,t,d,tim));
         }
-
+        listAdapter.mExampleList = updatedCardArrayList;
         listAdapter.notifyDataSetChanged();
 
     }

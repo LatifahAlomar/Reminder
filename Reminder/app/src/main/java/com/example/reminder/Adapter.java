@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 public class Adapter extends RecyclerView.Adapter<Adapter.ExampleViewHolder> {
-    private ArrayList<remind_card> mExampleList;
+    public ArrayList<remind_card> mExampleList;
     public static class ExampleViewHolder extends RecyclerView.ViewHolder {
         public TextView priority;
         public TextView task;
