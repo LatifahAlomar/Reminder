@@ -2,17 +2,9 @@ package com.example.reminder;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
-import android.content.Context;
 import android.app.TimePickerDialog;
+import android.content.Context;
 import android.os.Bundle;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
-import android.text.InputType;
-import android.view.View;
-
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -20,11 +12,6 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TimePicker;
-
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Locale;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,7 +19,10 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -50,10 +40,11 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         toolbar.setTitle("Reminder");
         newRminder = new Dialog(this);
-
-        newRminder = new Dialog(this);
         newRminder.setContentView(R.layout.add_reminder_dialog);
-        reminder_title = newRminder.findViewById(R.id.title_input);
+        final EditText priorityInput =newRminder.findViewById(R.id.Priority);
+        final EditText titleInput = newRminder.findViewById(R.id.TitleEditText);
+        final EditText dateInput = newRminder.findViewById(R.id.dateInput);
+        final EditText timeInput = newRminder.findViewById(R.id.TimeInput);
         pickersListeners();
         doneButton = newRminder.findViewById(R.id.doneButton);
         doneButton.setOnClickListener(new View.OnClickListener() {
@@ -61,11 +52,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 newRminder.dismiss();
                 //database insertion
-                EditText priorityInput =newRminder.findViewById(R.id.Priority);
-                EditText titleInput = newRminder.findViewById(R.id.TitleEditText);
-                EditText dateInput = newRminder.findViewById(R.id.dateInput);
-                EditText timeInput = newRminder.findViewById(R.id.TimeInput);
-
                 String priority = priorityInput.getText().toString();
                 String title = titleInput.getText().toString();
                 String date = dateInput.getText().toString();
@@ -89,8 +75,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
-
        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -128,15 +112,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void pickersListeners(){
-        reminder_date = newRminder.findViewById(R.id.date_input);
-        reminder_time = newRminder.findViewById(R.id.time_input);
 
         reminder_date.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 showDateDialog(reminder_date);
             }
-
             private void showDateDialog(final EditText reminder_date) {
                 final Calendar calendar = Calendar.getInstance();
                 DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener() {
