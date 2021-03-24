@@ -67,10 +67,12 @@ public class MainActivity extends AppCompatActivity {
                 String title = titleInput.getText().toString();
                 String date = dateInput.getText().toString();
                 String time = timeInput.getText().toString();
-
+                boolean empty = priority.isEmpty() || title.isEmpty() || date.isEmpty() || time.isEmpty();
+                if (empty) {
+                    newRminder.dismiss();
+                    return;
+                }
                 Boolean checking = DB.insertuserdata(title,date,time,priority);
-
-
 
                 if(checking){
 
