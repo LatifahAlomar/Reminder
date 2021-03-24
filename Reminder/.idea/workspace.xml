@@ -11,15 +11,14 @@
   <component name="ChangeListManager">
     <list default="true" id="fc138eb1-d328-4766-9a21-216a5b8b45c8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/add_reminder_dialog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/add_reminder_dialog.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/reminder/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/reminder/MainActivity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Nexus_6_API_30]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -150,22 +149,22 @@
       <screen x="0" y="25" width="1920" height="977" />
     </state>
     <state x="712" y="212" key="#com.intellij.ide.util.MemberChooser/0.25.1920.977@0.25.1920.977" timestamp="1613855238937" />
-    <state width="1720" height="234" key="GridCell.Tab.0.bottom" timestamp="1613860755972">
+    <state width="1720" height="234" key="GridCell.Tab.0.bottom" timestamp="1613862695819">
       <screen x="0" y="25" width="1920" height="977" />
     </state>
-    <state width="1720" height="234" key="GridCell.Tab.0.bottom/0.25.1920.977@0.25.1920.977" timestamp="1613860755972" />
-    <state width="1720" height="234" key="GridCell.Tab.0.center" timestamp="1613860755971">
+    <state width="1720" height="234" key="GridCell.Tab.0.bottom/0.25.1920.977@0.25.1920.977" timestamp="1613862695819" />
+    <state width="1720" height="234" key="GridCell.Tab.0.center" timestamp="1613862695818">
       <screen x="0" y="25" width="1920" height="977" />
     </state>
-    <state width="1720" height="234" key="GridCell.Tab.0.center/0.25.1920.977@0.25.1920.977" timestamp="1613860755971" />
-    <state width="1720" height="234" key="GridCell.Tab.0.left" timestamp="1613860755971">
+    <state width="1720" height="234" key="GridCell.Tab.0.center/0.25.1920.977@0.25.1920.977" timestamp="1613862695818" />
+    <state width="1720" height="234" key="GridCell.Tab.0.left" timestamp="1613862695818">
       <screen x="0" y="25" width="1920" height="977" />
     </state>
-    <state width="1720" height="234" key="GridCell.Tab.0.left/0.25.1920.977@0.25.1920.977" timestamp="1613860755971" />
-    <state width="1720" height="234" key="GridCell.Tab.0.right" timestamp="1613860755971">
+    <state width="1720" height="234" key="GridCell.Tab.0.left/0.25.1920.977@0.25.1920.977" timestamp="1613862695818" />
+    <state width="1720" height="234" key="GridCell.Tab.0.right" timestamp="1613862695818">
       <screen x="0" y="25" width="1920" height="977" />
     </state>
-    <state width="1720" height="234" key="GridCell.Tab.0.right/0.25.1920.977@0.25.1920.977" timestamp="1613860755971" />
+    <state width="1720" height="234" key="GridCell.Tab.0.right/0.25.1920.977@0.25.1920.977" timestamp="1613862695818" />
     <state x="470" y="229" key="IDE.errors.dialog" timestamp="1613849154756">
       <screen x="0" y="25" width="1920" height="977" />
     </state>
