@@ -1743,10 +1743,10 @@ id SYM
 id SecondFragment
 id TOP_END
 id TOP_START
+id Time
 id TimeInput
-id TimeView
+id Title
 id TitleEditText
-id TitleView
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -1857,8 +1857,8 @@ id counterclockwise
 id custom
 id customPanel
 id cut
+id date
 id dateInput
-id dateView
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -2033,7 +2033,7 @@ id percent
 id pin
 id position
 id postLayout
-id priorityView
+id priority
 id progress_circular
 id progress_horizontal
 id radio

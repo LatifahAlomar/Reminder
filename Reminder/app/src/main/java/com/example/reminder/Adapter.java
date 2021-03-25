@@ -18,10 +18,10 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ExampleViewHolder> {
         public TextView time;
         public ExampleViewHolder(View itemView) {
             super(itemView);
-            priority = itemView.findViewById(R.id.priorityView);
-            task = itemView.findViewById(R.id.TitleView);
-            date = itemView.findViewById(R.id.dateView);
-            time = itemView.findViewById(R.id.TimeView);
+            priority = itemView.findViewById(R.id.priority);
+            task = itemView.findViewById(R.id.Title);
+            date = itemView.findViewById(R.id.date);
+            time = itemView.findViewById(R.id.Time);
         }
     }
     public Adapter(ArrayList<remind_card> exampleList) {

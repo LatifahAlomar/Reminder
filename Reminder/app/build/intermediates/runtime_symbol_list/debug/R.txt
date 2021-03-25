@@ -1742,10 +1742,10 @@ int id SYM 0x7f08000e
 int id SecondFragment 0x7f08000f
 int id TOP_END 0x7f080010
 int id TOP_START 0x7f080011
-int id TimeInput 0x7f080012
-int id TimeView 0x7f080013
-int id TitleEditText 0x7f080014
-int id TitleView 0x7f080015
+int id Time 0x7f080012
+int id TimeInput 0x7f080013
+int id Title 0x7f080014
+int id TitleEditText 0x7f080015
 int id accelerate 0x7f080016
 int id accessibility_action_clickable_span 0x7f080017
 int id accessibility_custom_action_0 0x7f080018
@@ -1856,8 +1856,8 @@ int id counterclockwise 0x7f080080
 int id custom 0x7f080081
 int id customPanel 0x7f080082
 int id cut 0x7f080083
-int id dateInput 0x7f080084
-int id dateView 0x7f080085
+int id date 0x7f080084
+int id dateInput 0x7f080085
 int id date_picker_actions 0x7f080086
 int id decelerate 0x7f080087
 int id decelerateAndComplete 0x7f080088
@@ -2032,7 +2032,7 @@ int id percent 0x7f080130
 int id pin 0x7f080131
 int id position 0x7f080132
 int id postLayout 0x7f080133
-int id priorityView 0x7f080134
+int id priority 0x7f080134
 int id progress_circular 0x7f080135
 int id progress_horizontal 0x7f080136
 int id radio 0x7f080137

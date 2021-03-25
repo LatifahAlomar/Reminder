@@ -20,6 +20,9 @@ public class reminderBroadcastReceiver extends BroadcastReceiver {
 
         String title = intent.getStringExtra("title");
         String priority = intent.getStringExtra("priority");
+        String date = intent.getStringExtra("date");
+        String time = intent.getStringExtra("time");
+
         String channelId = "";
         int p = 0;
         switch (priority){
@@ -35,6 +38,10 @@ public class reminderBroadcastReceiver extends BroadcastReceiver {
             break;
         }
         Intent contentIntent= new Intent(context, ReminderDetails.class);
+        contentIntent.putExtra("title", title);
+        contentIntent.putExtra("priority", priority);
+        contentIntent.putExtra("date", date);
+        contentIntent.putExtra("time", time);
         PendingIntent pendingContentIntent = PendingIntent.getActivity(context, 0, contentIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, channelId)
                 .setSmallIcon(R.drawable.redbutton)

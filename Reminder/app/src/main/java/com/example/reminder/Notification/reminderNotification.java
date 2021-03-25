@@ -71,6 +71,8 @@ public class reminderNotification {
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         intent.putExtra("title", title);
         intent.putExtra("priority", priority);
+        intent.putExtra("date", date);
+        intent.putExtra("time", time);
 
 
         PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, intent, 0);
