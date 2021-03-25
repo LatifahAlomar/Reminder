@@ -37,17 +37,16 @@
             android:selectAllOnFocus="true"
             android:singleLine="false" />
 
-        <EditText
-            android:id="@+id/Priority"
+        <Switch
+            android:id="@+id/PrioritySwitch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:ems="10"
-            android:hint="Priority"
-            android:inputType="textPersonName"
-            android:selectAllOnFocus="true"
-            android:singleLine="false" />
+            android:hint="High priority"
+            android:singleLine="false"
+            android:checked="true"/>
 
         <EditText
             android:id="@+id/dateInput"

@@ -1734,7 +1734,7 @@ id FirstFragment
 id FrigmantrecyclerView
 id META
 id NO_DEBUG
-id Priority
+id PrioritySwitch
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
