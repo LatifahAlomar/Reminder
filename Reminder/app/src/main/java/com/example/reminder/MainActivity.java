@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<remind_card> cardArrayList;
     Adapter listAdapter;
     RecyclerView recyclerView;
-
+    EditText dateInput;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +40,13 @@ public class MainActivity extends AppCompatActivity {
         newRminder = new Dialog(this);
         newRminder.setContentView(R.layout.add_reminder_dialog);
         doneButton = newRminder.findViewById(R.id.doneButton);
-
+        dateInput = newRminder.findViewById(R.id.dateInput);
+        dateInput.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("clicked", "date input was clicked");
+            }
+        });
         // RecyclerView
         recyclerView = findViewById(R.id.recyclerView);
         cardArrayList = new ArrayList<>();
@@ -48,11 +55,8 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
+
         updateList();
-
-
-
-
 
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -144,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
+
 }

@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>Adapter.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #080808;}
+.s1 { color: #0033b3;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Adapter.java</font>
+</center></td></tr></table>
+<pre>
+<span class="s1">package </span><span class="s0">com.example.reminder;</span>
+
+<span class="s1">import </span><span class="s0">android.view.LayoutInflater;</span>
+<span class="s1">import </span><span class="s0">android.view.View;</span>
+<span class="s1">import </span><span class="s0">android.view.ViewGroup;</span>
+<span class="s1">import </span><span class="s0">android.widget.TextView;</span>
+
+<span class="s1">import </span><span class="s0">androidx.recyclerview.widget.RecyclerView;</span>
+
+<span class="s1">import </span><span class="s0">java.util.ArrayList;</span>
+<span class="s1">public class </span><span class="s0">Adapter </span><span class="s1">extends </span><span class="s0">RecyclerView.Adapter&lt;Adapter.ExampleViewHolder&gt; {</span>
+    <span class="s1">public </span><span class="s0">ArrayList&lt;remind_card&gt; mExampleList;</span>
+    <span class="s1">public static class </span><span class="s0">ExampleViewHolder </span><span class="s1">extends </span><span class="s0">RecyclerView.ViewHolder {</span>
+        <span class="s1">public </span><span class="s0">TextView priority;</span>
+        <span class="s1">public </span><span class="s0">TextView task;</span>
+        <span class="s1">public </span><span class="s0">TextView date;</span>
+        <span class="s1">public </span><span class="s0">TextView time;</span>
+        <span class="s1">public </span><span class="s0">ExampleViewHolder(View itemView) {</span>
+            <span class="s1">super</span><span class="s0">(itemView);</span>
+            <span class="s0">priority = itemView.findViewById(R.id.priorityView);</span>
+            <span class="s0">task = itemView.findViewById(R.id.TitleView);</span>
+            <span class="s0">date = itemView.findViewById(R.id.dateView);</span>
+            <span class="s0">time = itemView.findViewById(R.id.TimeView);</span>
+        <span class="s0">}</span>
+    <span class="s0">}</span>
+    <span class="s1">public </span><span class="s0">Adapter(ArrayList&lt;remind_card&gt; exampleList) {</span>
+        <span class="s0">mExampleList = exampleList;</span>
+    <span class="s0">}</span>
+    <span class="s0">@Override</span>
+    <span class="s1">public </span><span class="s0">ExampleViewHolder onCreateViewHolder(ViewGroup parent, </span><span class="s1">int </span><span class="s0">viewType) {</span>
+        <span class="s0">View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.remider_card, parent, </span><span class="s1">false</span><span class="s0">);</span>
+        <span class="s0">ExampleViewHolder evh = </span><span class="s1">new </span><span class="s0">ExampleViewHolder(v);</span>
+        <span class="s1">return </span><span class="s0">evh;</span>
+    <span class="s0">}</span>
+    <span class="s0">@Override</span>
+    <span class="s1">public void </span><span class="s0">onBindViewHolder(ExampleViewHolder holder, </span><span class="s1">int </span><span class="s0">position) {</span>
+        <span class="s0">remind_card currentReminder = mExampleList.get(position);</span>
+        <span class="s0">holder.priority.setText(currentReminder.getPriority());</span>
+        <span class="s0">holder.task.setText(currentReminder.getTask());</span>
+        <span class="s0">holder.date.setText(currentReminder.getDate());</span>
+        <span class="s0">holder.time.setText(currentReminder.getTime());</span>
+    <span class="s0">}</span>
+    <span class="s0">@Override</span>
+    <span class="s1">public int </span><span class="s0">getItemCount() {</span>
+        <span class="s1">return </span><span class="s0">mExampleList.size();</span>
+    <span class="s0">}</span>
+<span class="s0">}</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>FirstFragment.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #0033b3;}
+.s1 { color: #080808;}
+.s2 { color: #8c8c8c; font-style: italic;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+FirstFragment.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.example.reminder;</span>
+
+<span class="s0">import </span><span class="s1">android.os.Bundle;</span>
+<span class="s0">import </span><span class="s1">android.view.LayoutInflater;</span>
+<span class="s0">import </span><span class="s1">android.view.View;</span>
+<span class="s0">import </span><span class="s1">android.view.ViewGroup;</span>
+
+<span class="s0">import </span><span class="s1">androidx.annotation.NonNull;</span>
+<span class="s0">import </span><span class="s1">androidx.fragment.app.Fragment;</span>
+<span class="s0">import </span><span class="s1">androidx.recyclerview.widget.LinearLayoutManager;</span>
+<span class="s0">import </span><span class="s1">androidx.recyclerview.widget.RecyclerView;</span>
+
+<span class="s0">import </span><span class="s1">java.util.ArrayList;</span>
+
+<span class="s0">public class </span><span class="s1">FirstFragment </span><span class="s0">extends </span><span class="s1">Fragment {</span>
+
+    <span class="s1">ArrayList&lt;remind_card&gt; cardArrayList;</span>
+    <span class="s1">database DB;</span>
+        <span class="s1">@Override</span>
+    <span class="s0">public </span><span class="s1">View onCreateView(</span>
+            <span class="s1">LayoutInflater inflater, @NonNull ViewGroup container,</span>
+            <span class="s1">Bundle savedInstanceState</span>
+    <span class="s1">) {</span>
+        <span class="s2">// Inflate the layout for this fragment</span>
+        <span class="s1">View view = inflater.inflate(R.layout.fragment_first, container, </span><span class="s0">false</span><span class="s1">);</span>
+        <span class="s1">RecyclerView recyclerView = (RecyclerView)view.findViewById(R.id.FrigmantrecyclerView);</span>
+        <span class="s1">DB = </span><span class="s0">new </span><span class="s1">database(getContext());</span>
+         <span class="s1">cardArrayList = </span><span class="s0">new </span><span class="s1">ArrayList&lt;&gt;();</span>
+<span class="s2">//        Cursor cursor = DB.getdata();</span>
+<span class="s2">//        while(cursor.moveToNext()) {</span>
+<span class="s2">//            int index;</span>
+<span class="s2">//            index = cursor.getColumnIndexOrThrow(&quot;title&quot;);</span>
+<span class="s2">//            String t = cursor.getString(index);</span>
+<span class="s2">//</span>
+<span class="s2">//            index = cursor.getColumnIndexOrThrow(&quot;date&quot;);</span>
+<span class="s2">//            String d = cursor.getString(index);</span>
+<span class="s2">//</span>
+<span class="s2">//            index = cursor.getColumnIndexOrThrow(&quot;time&quot;);</span>
+<span class="s2">//            String tim = cursor.getString(index);</span>
+<span class="s2">//</span>
+<span class="s2">//            index = cursor.getColumnIndexOrThrow(&quot;importance&quot;);</span>
+<span class="s2">//            String p = cursor.getString(index);</span>
+<span class="s2">//            cardArrayList.add(new remind_card(p,t,d,tim));</span>
+<span class="s2">//        }</span>
+
+        <span class="s1">Adapter listAdapter = </span><span class="s0">new </span><span class="s1">Adapter(cardArrayList) ;</span>
+        <span class="s1">recyclerView.setAdapter(listAdapter);</span>
+        <span class="s1">RecyclerView.LayoutManager layoutManager = </span><span class="s0">new </span><span class="s1">LinearLayoutManager(getActivity());</span>
+        <span class="s1">recyclerView.setLayoutManager(layoutManager);</span>
+        <span class="s0">return </span><span class="s1">view;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public void </span><span class="s1">onViewCreated(@NonNull View view, Bundle savedInstanceState) {</span>
+        <span class="s0">super</span><span class="s1">.onViewCreated(view, savedInstanceState);</span>
+
+
+<span class="s2">//        view.findViewById(R.id.fab).setOnClickListener(new View.OnClickListener() {</span>
+<span class="s2">//            @Override</span>
+<span class="s2">//            public void onClick(View view) {</span>
+<span class="s2">//                NavHostFragment.findNavController(FirstFragment.this)</span>
+<span class="s2">//                        .navigate(R.id.action_FirstFragment_to_SecondFragment);</span>
+<span class="s2">//              // newRminder.show();</span>
+<span class="s2">//            }</span>
+<span class="s2">//        });</span>
+    <span class="s1">}</span>
+
+
+
+<span class="s1">}</span></pre>
+</body>
+</html>

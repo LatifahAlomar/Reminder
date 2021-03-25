@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>SecondFragment.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #0033b3;}
+.s1 { color: #080808;}
+.s2 { color: #8c8c8c; font-style: italic;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+SecondFragment.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.example.reminder;</span>
+
+<span class="s0">import </span><span class="s1">android.app.AlertDialog;</span>
+<span class="s0">import </span><span class="s1">android.icu.util.Calendar;</span>
+<span class="s0">import </span><span class="s1">android.icu.util.GregorianCalendar;</span>
+<span class="s0">import </span><span class="s1">android.os.Build;</span>
+<span class="s0">import </span><span class="s1">android.os.Bundle;</span>
+<span class="s0">import </span><span class="s1">android.view.LayoutInflater;</span>
+<span class="s0">import </span><span class="s1">android.view.View;</span>
+<span class="s0">import </span><span class="s1">android.view.ViewGroup;</span>
+<span class="s0">import </span><span class="s1">android.widget.DatePicker;</span>
+<span class="s0">import </span><span class="s1">android.widget.TimePicker;</span>
+
+<span class="s0">import </span><span class="s1">androidx.annotation.NonNull;</span>
+<span class="s0">import </span><span class="s1">androidx.annotation.RequiresApi;</span>
+<span class="s0">import </span><span class="s1">androidx.fragment.app.Fragment;</span>
+<span class="s0">import </span><span class="s1">androidx.navigation.fragment.NavHostFragment;</span>
+
+<span class="s0">public class </span><span class="s1">SecondFragment </span><span class="s0">extends </span><span class="s1">Fragment {</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">public </span><span class="s1">View onCreateView(</span>
+            <span class="s1">LayoutInflater inflater, ViewGroup container,</span>
+            <span class="s1">Bundle savedInstanceState</span>
+    <span class="s1">) {</span>
+        <span class="s2">// Inflate the layout for this fragment</span>
+        <span class="s0">return </span><span class="s1">inflater.inflate(R.layout.fragment_second, container, </span><span class="s0">false</span><span class="s1">);</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public void </span><span class="s1">onViewCreated(@NonNull View view, Bundle savedInstanceState) {</span>
+        <span class="s0">super</span><span class="s1">.onViewCreated(view, savedInstanceState);</span>
+
+     <span class="s2">//   https://stackoverflow.com/questions/2055509/how-to-create-a-date-and-time-picker-in-android</span>
+<span class="s2">//</span>
+<span class="s2">//        final View dialogView = View.inflate(MainActivity.class, R.layout.date_time_picker, null);</span>
+<span class="s2">//        final AlertDialog alertDialog = new AlertDialog.Builder(activity).create();</span>
+<span class="s2">//</span>
+<span class="s2">//        dialogView.findViewById(R.id.date_time_set).setOnClickListener(new View.OnClickListener() {</span>
+<span class="s2">//            @RequiresApi(api = Build.VERSION_CODES.N)</span>
+<span class="s2">//            @Override</span>
+<span class="s2">//            public void onClick(View view) {</span>
+<span class="s2">//</span>
+<span class="s2">//                DatePicker datePicker = (DatePicker) dialogView.findViewById(R.id.date_picker);</span>
+<span class="s2">//                TimePicker timePicker = (TimePicker) dialogView.findViewById(R.id.time_picker);</span>
+<span class="s2">//</span>
+<span class="s2">//                Calendar calendar = new GregorianCalendar(datePicker.getYear(),</span>
+<span class="s2">//                        datePicker.getMonth(),</span>
+<span class="s2">//                        datePicker.getDayOfMonth(),</span>
+<span class="s2">//                        timePicker.getCurrentHour(),</span>
+<span class="s2">//                        timePicker.getCurrentMinute());</span>
+<span class="s2">//</span>
+<span class="s2">//                time = calendar.getTimeInMillis();</span>
+<span class="s2">//                alertDialog.dismiss();</span>
+<span class="s2">//            }});</span>
+<span class="s2">//        alertDialog.setView(dialogView);</span>
+<span class="s2">//        alertDialog.show();</span>
+    <span class="s1">}</span>
+<span class="s1">}</span></pre>
+</body>
+</html>

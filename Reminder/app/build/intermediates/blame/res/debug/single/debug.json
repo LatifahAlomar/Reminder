@@ -40,12 +40,12 @@
         "source": "/Users/najdalsughaiyer/Documents/8th/Mobile/Reminder/Reminder/app/src/main/res/layout/add_reminder_dialog.xml"
     },
     {
-        "merged": "/Users/najdalsughaiyer/Documents/8th/Mobile/Reminder/Reminder/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_baseline_notifications_active_24.xml.flat",
-        "source": "/Users/najdalsughaiyer/Documents/8th/Mobile/Reminder/Reminder/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_baseline_notifications_active_24.xml"
-    },
-    {
         "merged": "/Users/najdalsughaiyer/Documents/8th/Mobile/Reminder/Reminder/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_launcher_background.png.flat",
         "source": "/Users/najdalsughaiyer/Documents/8th/Mobile/Reminder/Reminder/app/build/generated/res/pngs/debug/drawable-hdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "/Users/najdalsughaiyer/Documents/8th/Mobile/Reminder/Reminder/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_baseline_notifications_active_24.xml.flat",
+        "source": "/Users/najdalsughaiyer/Documents/8th/Mobile/Reminder/Reminder/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_baseline_notifications_active_24.xml"
     },
     {
         "merged": "/Users/najdalsughaiyer/Documents/8th/Mobile/Reminder/Reminder/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
