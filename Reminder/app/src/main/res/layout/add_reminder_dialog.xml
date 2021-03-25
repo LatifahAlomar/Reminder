@@ -37,16 +37,15 @@
             android:selectAllOnFocus="true"
             android:singleLine="false" />
 
-        <Switch
+        <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/PrioritySwitch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:ems="10"
-            android:hint="High priority"
-            android:singleLine="false"
-            android:checked="true"/>
+            android:hint="@string/high_priority"
+           />
 
         <EditText
             android:id="@+id/dateInput"

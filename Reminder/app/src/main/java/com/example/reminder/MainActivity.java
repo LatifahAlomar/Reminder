@@ -13,11 +13,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.Switch;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.DialogFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -79,17 +79,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //database insertion
-//                ToggleButton priorityInput = (ToggleButton) findViewById(R.id.Priority);
-                Switch priorityInput = (Switch) findViewById(R.id.PrioritySwitch);
-                priorityInput.setChecked(true);
+
                 EditText titleInput = newRminder.findViewById(R.id.TitleEditText);
                 EditText dateInput = newRminder.findViewById(R.id.dateInput);
                 EditText timeInput = newRminder.findViewById(R.id.TimeInput);
+                SwitchCompat priorityInput = newRminder.findViewById(R.id.PrioritySwitch);
                 boolean checked = priorityInput.isChecked();
-                String priority = ""+checked;
 
-                Toast toast = Toast.makeText(context, priority, Toast.LENGTH_SHORT);
-                toast.show();
+                String priority = checked? "High" : "Low";
                 String title = titleInput.getText().toString();
                 String date = dateInput.getText().toString();
                 String time = timeInput.getText().toString();
@@ -104,14 +101,13 @@ public class MainActivity extends AppCompatActivity {
 
                     newRminder.dismiss();
                     Context context = getApplicationContext();
-                    toast = Toast.makeText(context, "added a new reminder successfully", Toast.LENGTH_SHORT);
-                    toast.show();
+                    Toast.makeText(context, "added a new reminder successfully", Toast.LENGTH_SHORT).show();
                     updateList();
                 }
                 else{
                     Context context = getApplicationContext();
-                    toast = Toast.makeText(context, "try again", Toast.LENGTH_SHORT);
-                    toast.show();
+                    Toast.makeText(context, "try again", Toast.LENGTH_SHORT).show();
+
                 }
             }
         });
