@@ -16,6 +16,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.reminder.Notification.reminderNotification;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -28,11 +29,24 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<remind_card> cardArrayList;
     Adapter listAdapter;
     RecyclerView recyclerView;
+    Context context;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        context = getApplicationContext();
+
+
+
+        // Initialize notifications
+        reminderNotification.init(this);
+        reminderNotification.addReminder(this);
+        // Add a reminder
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setTitle("Reminder");
@@ -52,8 +66,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,17 +82,14 @@ public class MainActivity extends AppCompatActivity {
 
                 Boolean checking = DB.insertuserdata(title,date,time,priority);
 
-
-
                 if(checking){
-
                     newRminder.dismiss();
-                    Context context = getApplicationContext();
+
                     Toast toast = Toast.makeText(context, "added a new reminder successfully", Toast.LENGTH_SHORT);
                     toast.show();
                     updateList();
                 }
-                else{
+                else {
                     Context context = getApplicationContext();
                     Toast toast = Toast.makeText(context, "try again", Toast.LENGTH_SHORT);
                     toast.show();
@@ -97,6 +106,12 @@ public class MainActivity extends AppCompatActivity {
 //                        .setAction("Action", null).show();
             }
         });
+
+
+
+
+
+
     }
 
 
@@ -145,4 +160,7 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+
 }

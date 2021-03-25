@@ -21,7 +21,7 @@
       "properties": {
         "packageId": "com.example.reminder",
         "split": "",
-        "minSdkVersion": "16"
+        "minSdkVersion": "26"
       }
     }
   ]

@@ -1,4 +1,7 @@
-#Wed Mar 24 00:15:31 AST 2021
-base.0=/Users/heila/Dev/Reminder/Reminder/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
+#Thu Mar 25 03:28:50 AST 2021
+base.0=/Users/heila/Dev/Reminder/Reminder/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+path.1=classes.dex
+renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
+base.1=/Users/heila/Dev/Reminder/Reminder/app/build/intermediates/dex/debug/mergeProjectDexDebug/classes.dex

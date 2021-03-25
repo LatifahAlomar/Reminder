@@ -2421,9 +2421,10 @@ int string path_password_eye_mask_strike_through 0x7f100066
 int string path_password_eye_mask_visible 0x7f100067
 int string path_password_strike_through 0x7f100068
 int string previous 0x7f100069
-int string search_menu_title 0x7f10006a
-int string second_fragment_label 0x7f10006b
-int string status_bar_notification_info_overflow 0x7f10006c
+int string reminder_notification 0x7f10006a
+int string search_menu_title 0x7f10006b
+int string second_fragment_label 0x7f10006c
+int string status_bar_notification_info_overflow 0x7f10006d
 int style AlertDialog_AppCompat 0x7f110000
 int style AlertDialog_AppCompat_Light 0x7f110001
 int style AndroidThemeColorAccentYellow 0x7f110002
