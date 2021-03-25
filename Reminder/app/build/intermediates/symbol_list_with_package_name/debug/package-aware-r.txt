@@ -1734,7 +1734,7 @@ id FirstFragment
 id FrigmantrecyclerView
 id META
 id NO_DEBUG
-id Priority
+id PrioritySwitch
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -2224,6 +2224,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout activity_reminder_details
 layout add_reminder_dialog
 layout content_main
 layout custom_dialog
@@ -2361,8 +2362,11 @@ string first_fragment_label
 string hello_first_fragment
 string hello_second_fragment
 string hide_bottom_view_on_scroll_behavior
+string highPriorityChannel
+string high_priority
 string icon_content_description
 string item_view_role_description
+string lowPriorityChannel
 string material_clock_display_divider
 string material_clock_toggle_content_description
 string material_hour_selection

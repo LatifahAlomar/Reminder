@@ -15,11 +15,28 @@ public class reminderBroadcastReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
 
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(context, "reminder_notification")
+        String title = intent.getStringExtra("title");
+        String priority = intent.getStringExtra("priority");
+        String channelId = "";
+        int p = 0;
+        switch (priority){
+            case "High":{
+                 p = NotificationCompat.PRIORITY_HIGH;
+                 channelId = "high_priority";
+            }
+            break;
+            case "Low":{
+                p = NotificationCompat.PRIORITY_LOW;
+                channelId = "low_priority";
+            }
+            break;
+        }
+
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(context, channelId)
                 .setSmallIcon(R.drawable.redbutton)
-                .setContentTitle("My notification")
-                .setContentText("Hello World!")
-                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                .setContentTitle("Reminder")
+                .setContentText(title)
+                .setPriority(p)
                 // Set the intent that will fire when the user taps the notification
 //                .setContentIntent(intent)
                 .setAutoCancel(true);
@@ -28,9 +45,6 @@ public class reminderBroadcastReceiver extends BroadcastReceiver {
 
 // notificationId is a unique int for each notification that you must define
         notificationManager.notify(1, builder.build());
-        Toast.makeText(context, "Alarmii....", Toast.LENGTH_LONG).show();
-
-        Toast.makeText(context, "hi", Toast.LENGTH_LONG).show();
     }
 }
 

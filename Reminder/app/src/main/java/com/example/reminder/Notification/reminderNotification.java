@@ -17,6 +17,9 @@ import java.util.Locale;
 
 public class reminderNotification {
 
+    public static NotificationChannel highPriorityChannel;
+    public static NotificationChannel lowPriorityChannel;
+
     public static void init(Context context){
         createNotificationChannel(context);
     }
@@ -24,29 +27,62 @@ public class reminderNotification {
     private static void createNotificationChannel(Context context) {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            CharSequence name = context.getString(R.string.reminder_notification);
+
+            // Names
+            CharSequence highPriorityChannelName = context.getString(R.string.highPriorityChannel);
+            CharSequence lowPriorityChannelName = context.getString(R.string.lowPriorityChannel);
+
+            // Description
             String description = context.getString(R.string.reminder_notification);
-            int importance = NotificationManager.IMPORTANCE_DEFAULT;
-            NotificationChannel channel = new NotificationChannel("reminder_notification", name, importance);
-            channel.setDescription(description);
+
+            // Imprtance
+            int highPriority = NotificationManager.IMPORTANCE_HIGH;
+            int lowPriority = NotificationManager.IMPORTANCE_LOW;
+
+            // High priority channel
+            highPriorityChannel = new NotificationChannel("high_priority", highPriorityChannelName, highPriority);
+            highPriorityChannel.setDescription(description);
+
+            // Low priority channel
+            lowPriorityChannel = new NotificationChannel("low_priority", lowPriorityChannelName, lowPriority);
+            lowPriorityChannel.setDescription(description);
+
+            // Create Notification Manager
             NotificationManager notificationManager = context.getSystemService(NotificationManager.class);
-            notificationManager.createNotificationChannel(channel);
+
+            // Create Channels
+            notificationManager.createNotificationChannel(highPriorityChannel);
+            notificationManager.createNotificationChannel(lowPriorityChannel);
         }
     }
 
+    public NotificationChannel getHighPriorityChannel(){
+        return highPriorityChannel;
+    }
 
-    public static void addReminder(Context context){
+    public NotificationChannel getLowPriorityChannel(){
+        return lowPriorityChannel;
+    }
+
+
+    public static void addReminder(Context context, String title, String date, String time, String priority){
 
         Intent intent = new Intent(context, reminderBroadcastReceiver.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        intent.putExtra("title", title);
+        intent.putExtra("priority", priority);
+
+
         PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, intent, 0);
 
 
 
-        String date = "Thu Mar 25 03:30:00 GMT+03:00 2021";
+        String x = "03/25/2021 GMT+03:00 19:22";
+        String d = date + " GMT+03:00 " + time;
 
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEE MMM dd HH:mm:ss z yyyy", Locale.ENGLISH);
-        LocalDateTime localDate = LocalDateTime.parse(date, formatter);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy z HH:mm", Locale.ENGLISH);
+
+        LocalDateTime localDate = LocalDateTime.parse(d, formatter);
         long timeInMilliseconds = localDate.atOffset(OffsetDateTime.now().getOffset()).toInstant().toEpochMilli();
 
         AlarmManager alarm = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);

@@ -112,6 +112,10 @@
         "source": "/Users/heila/Dev/Reminder/Reminder/app/src/main/res/layout/activity_main.xml"
     },
     {
+        "merged": "/Users/heila/Dev/Reminder/Reminder/app/build/intermediates/res/merged/debug/layout_activity_reminder_details.xml.flat",
+        "source": "/Users/heila/Dev/Reminder/Reminder/app/src/main/res/layout/activity_reminder_details.xml"
+    },
+    {
         "merged": "/Users/heila/Dev/Reminder/Reminder/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "/Users/heila/Dev/Reminder/Reminder/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     }
