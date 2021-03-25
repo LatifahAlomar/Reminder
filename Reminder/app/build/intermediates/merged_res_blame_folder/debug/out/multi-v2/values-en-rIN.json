@@ -53,6 +53,23 @@
                         "endColumns": "100",
                         "endOffsets": "3164"
                     }
+                },
+                {
+                    "source": "/Users/najdalsughaiyer/.gradle/caches/transforms-2/files-2.1/305eff15c90953700070057bc66fdcd1/wear-1.0.0/res/values-en-rIN/values-en-rIN.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,164",
+                        "endColumns": "108,116",
+                        "endOffsets": "159,276"
+                    },
+                    "to": {
+                        "startLines": "33,34",
+                        "startColumns": "4,4",
+                        "startOffsets": "3169,3278",
+                        "endColumns": "108,116",
+                        "endOffsets": "3273,3390"
+                    }
                 }
             ]
         }

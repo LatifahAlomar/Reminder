@@ -40,6 +40,23 @@
                     }
                 },
                 {
+                    "source": "/Users/najdalsughaiyer/.gradle/caches/transforms-2/files-2.1/305eff15c90953700070057bc66fdcd1/wear-1.0.0/res/values-in/values-in.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,173",
+                        "endColumns": "117,113",
+                        "endOffsets": "168,282"
+                    },
+                    "to": {
+                        "startLines": "91,92",
+                        "startColumns": "4,4",
+                        "startOffsets": "7679,7797",
+                        "endColumns": "117,113",
+                        "endOffsets": "7792,7906"
+                    }
+                },
+                {
                     "source": "/Users/najdalsughaiyer/.gradle/caches/transforms-2/files-2.1/8dbd859d1cd89239b42e7382b4fc40d7/core-1.3.1/res/values-in/values-in.xml",
                     "from": {
                         "startLines": "2",

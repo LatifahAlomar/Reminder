@@ -11,4 +11,9 @@ public class ReminderDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reminder_details);
     }
+
+    @Override
+    public void onBackPressed(){
+        finish();
+    }
 }

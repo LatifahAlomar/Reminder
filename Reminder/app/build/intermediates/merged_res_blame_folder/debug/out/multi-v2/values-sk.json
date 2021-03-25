@@ -57,6 +57,23 @@
                     }
                 },
                 {
+                    "source": "/Users/najdalsughaiyer/.gradle/caches/transforms-2/files-2.1/305eff15c90953700070057bc66fdcd1/wear-1.0.0/res/values-sk/values-sk.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,171",
+                        "endColumns": "115,123",
+                        "endOffsets": "166,290"
+                    },
+                    "to": {
+                        "startLines": "93,94",
+                        "startColumns": "4,4",
+                        "startOffsets": "7816,7932",
+                        "endColumns": "115,123",
+                        "endOffsets": "7927,8051"
+                    }
+                },
+                {
                     "source": "/Users/najdalsughaiyer/.gradle/caches/transforms-2/files-2.1/9773cf80f63a729525da08ed7d917aac/navigation-ui-2.3.3/res/values-sk/values-sk.xml",
                     "from": {
                         "startLines": "2,3",

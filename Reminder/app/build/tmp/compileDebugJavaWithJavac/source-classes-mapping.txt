@@ -9,6 +9,8 @@ com/example/reminder/FirstFragment.java
  com.example.reminder.FirstFragment
 com/example/reminder/Notification/reminderBroadcastReceiver.java
  com.example.reminder.Notification.reminderBroadcastReceiver
+com/example/reminder/ReminderDetails.java
+ com.example.reminder.ReminderDetails
 com/example/reminder/BuildConfig.java
  com.example.reminder.BuildConfig
 com/example/reminder/remind_card.java

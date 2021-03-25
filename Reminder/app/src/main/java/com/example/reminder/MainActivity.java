@@ -23,6 +23,7 @@ import androidx.fragment.app.DialogFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.reminder.Notification.reminderNotification;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -74,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         updateList();
+        reminderNotification.init(context);
 
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,6 +92,8 @@ public class MainActivity extends AppCompatActivity {
                 String title = titleInput.getText().toString();
                 String date = dateInput.getText().toString();
                 String time = timeInput.getText().toString();
+
+
                 boolean empty = priority.isEmpty() || title.isEmpty() || date.isEmpty() || time.isEmpty();
                 if (empty) {
                     newRminder.dismiss();
@@ -97,8 +101,9 @@ public class MainActivity extends AppCompatActivity {
                 }
                 Boolean checking = DB.insertuserdata(title,date,time,priority);
 
-                if(checking){
 
+                if(checking){
+                    reminderNotification.addReminder(context, title,date,time,priority);
                     newRminder.dismiss();
                     Context context = getApplicationContext();
                     Toast.makeText(context, "added a new reminder successfully", Toast.LENGTH_SHORT).show();
@@ -111,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-       FloatingActionButton fab = findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -140,6 +145,7 @@ public class MainActivity extends AppCompatActivity {
 
             index = cursor.getColumnIndexOrThrow("importance");
             String p = cursor.getString(index);
+
             updatedCardArrayList.add(new remind_card(p,t,d,tim));
         }
         listAdapter.mExampleList = updatedCardArrayList;
@@ -148,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-@Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);

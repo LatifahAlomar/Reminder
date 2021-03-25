@@ -72,6 +72,23 @@
                         "endColumns": "116,111,110,89,104,118,77,75,90,92,94,93,99,92,94,94,90,90,82,113,101,96,114,102,114,161,102,80",
                         "endOffsets": "393,505,616,706,811,930,1008,1084,1175,1268,1363,1457,1557,1650,1745,1840,1931,2022,2105,2219,2321,2418,2533,2636,2751,2913,3016,7770"
                     }
+                },
+                {
+                    "source": "/Users/najdalsughaiyer/.gradle/caches/transforms-2/files-2.1/305eff15c90953700070057bc66fdcd1/wear-1.0.0/res/values-te/values-te.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,163",
+                        "endColumns": "107,116",
+                        "endOffsets": "158,275"
+                    },
+                    "to": {
+                        "startLines": "91,92",
+                        "startColumns": "4,4",
+                        "startOffsets": "7876,7984",
+                        "endColumns": "107,116",
+                        "endOffsets": "7979,8096"
+                    }
                 }
             ]
         }
