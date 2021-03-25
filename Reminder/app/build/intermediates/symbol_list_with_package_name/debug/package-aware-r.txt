@@ -2423,6 +2423,7 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string previous
+string reminder_notification
 string search_menu_title
 string second_fragment_label
 string status_bar_notification_info_overflow

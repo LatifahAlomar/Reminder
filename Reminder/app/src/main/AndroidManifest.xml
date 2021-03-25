@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
+        <receiver android:name=".Notification.reminderBroadcastReceiver"/>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
