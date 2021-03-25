@@ -1,5 +1,6 @@
 package com.example.reminder;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -12,6 +13,10 @@ public class ReminderDetails extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reminder_details);
+        assert getSupportActionBar() != null;   //null check
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);   //show back button
+
+
         titleView = findViewById(R.id.Title);
         priorityView = findViewById(R.id.priority);
         dateView = findViewById(R.id.date);
@@ -30,5 +35,11 @@ public class ReminderDetails extends AppCompatActivity {
     @Override
     public void onBackPressed(){
         finish();
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish();
+        return true;
     }
 }

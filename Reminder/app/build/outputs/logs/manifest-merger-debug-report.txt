@@ -85,7 +85,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/najd
 	android:theme
 		ADDED from /Users/najdalsughaiyer/Documents/8th/Mobile/Reminder/Reminder/app/src/main/AndroidManifest.xml:11:9-40
 activity#com.example.reminder.ReminderDetails
-ADDED from /Users/najdalsughaiyer/Documents/8th/Mobile/Reminder/Reminder/app/src/main/AndroidManifest.xml:12:9-62
+ADDED from /Users/najdalsughaiyer/Documents/8th/Mobile/Reminder/Reminder/app/src/main/AndroidManifest.xml:12:9-53
 	android:name
 		ADDED from /Users/najdalsughaiyer/Documents/8th/Mobile/Reminder/Reminder/app/src/main/AndroidManifest.xml:12:19-50
 receiver#com.example.reminder.Notification.reminderBroadcastReceiver

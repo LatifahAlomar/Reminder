@@ -14,6 +14,7 @@ import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
+import java.util.TimeZone;
 
 public class reminderNotification {
 
@@ -79,8 +80,8 @@ public class reminderNotification {
 
 
 
-        String x = "03/25/2021 GMT+03:00 19:22";
-        String d = date + " GMT+03:00 " + time;
+
+        String d = date + " "+ TimeZone.getDefault().getDisplayName(false, TimeZone.SHORT) + " "+ time;
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy z HH:mm", Locale.ENGLISH);
 

@@ -30,7 +30,7 @@
 21        android:theme="@style/AppTheme" >
 21-->/Users/najdalsughaiyer/Documents/8th/Mobile/Reminder/Reminder/app/src/main/AndroidManifest.xml:11:9-40
 22        <activity android:name="com.example.reminder.ReminderDetails" />
-22-->/Users/najdalsughaiyer/Documents/8th/Mobile/Reminder/Reminder/app/src/main/AndroidManifest.xml:12:9-62
+22-->/Users/najdalsughaiyer/Documents/8th/Mobile/Reminder/Reminder/app/src/main/AndroidManifest.xml:12:9-53
 22-->/Users/najdalsughaiyer/Documents/8th/Mobile/Reminder/Reminder/app/src/main/AndroidManifest.xml:12:19-50
 23
 24        <receiver android:name="com.example.reminder.Notification.reminderBroadcastReceiver" />
